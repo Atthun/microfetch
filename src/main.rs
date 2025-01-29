@@ -68,17 +68,17 @@ fn print_system_info(fields: &Fields) {
     let cyan = COLORS.cyan;
     let blue = COLORS.blue;
     let reset = COLORS.reset;
-    let system_info = format!("
-    {cyan}     ▟█▖    {blue}▝█▙ ▗█▛          {user_info} ~{reset}
-    {cyan}  ▗▄▄▟██▄▄▄▄▄{blue}▝█▙█▛  {cyan}▖        {cyan}  {blue}System{reset}        {os_name}
-    {cyan}  ▀▀▀▀▀▀▀▀▀▀▀▘{blue}▝██  {cyan}▟█▖       {cyan}  {blue}Kernel{reset}        {kernel_version}
-    {blue}     ▟█▛       {blue}▝█▘{cyan}▟█▛        {cyan}  {blue}Shell{reset}         {shell}
-    {blue}▟█████▛          {cyan}▟█████▛     {cyan}  {blue}Uptime{reset}        {uptime}
-    {blue}   ▟█▛{cyan}▗█▖       {cyan}▟█▛          {cyan}  {blue}Desktop{reset}       {desktop}
-    {blue}  ▝█▛  {cyan}██▖{blue}▗▄▄▄▄▄▄▄▄▄▄▄       {cyan}  {blue}Memory{reset}        {memory_usage}
-    {blue}   ▝  {cyan}▟█▜█▖{blue}▀▀▀▀▀██▛▀▀▘       {cyan}󱥎  {blue}Storage (/){reset}   {storage}
-    {cyan}     ▟█▘ ▜█▖    {blue}▝█▛          {cyan}  {blue}Colors{reset}        {colors}");
-
+    let system_info = format!(r"
+                            {user_info} ~{reset}
+    {cyan}       /\               {cyan}  {blue}System{reset}        {os_name}
+    {cyan}      /  \              {cyan}  {blue}Kernel{reset}        {kernel_version}
+    {cyan}     /\   \             {cyan}  {blue}Shell{reset}         {shell}
+    {cyan}    /      \            {cyan}  {blue}Uptime{reset}        {uptime}
+    {cyan}   /   ,,   \           {cyan}  {blue}Desktop{reset}       {desktop}
+    {cyan}  /   |  |  -\          {cyan}  {blue}Memory{reset}        {memory_usage}
+    {cyan} /_-''    ''-_\         {cyan}󱥎  {blue}Storage (/){reset}   {storage}
+                            {cyan}  {blue}Colors{reset}        {colors}
+     ");
     std::io::stdout()
         .lock()
         .write_all(format!("{}\n", system_info).as_bytes())
