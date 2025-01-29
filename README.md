@@ -19,4 +19,12 @@
 > [!NOTE]
 > You need a Nerd Font installed, and your terminal emulator must support it. Microfetch uses Nerd Font glyphs by default.
 
-- [@NotAShelf](https://github.com/NotAShelf) 
+You can install microfetch for Arch Linux from the AUR or compile it from source using `cargo build --release`
+
+# AUR
+`paru -S microfetch`
+or
+`yay -S microfetch`
+
+Thanks to [@NotAShelf](https://github.com/NotAShelf) for the original project [microfetch](https://github.com/NotAShelf/microfetch) 
+
